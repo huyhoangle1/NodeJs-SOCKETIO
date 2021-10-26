@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Demo Socket Io</title>
+        <!-- <script src="../public/jquery.js"></script> -->
+        <script src="socket.io/socket.io.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+        
+        <script>
+    
+            var Socket = io("http://localhost:3000/");
+            Socket.on('CLIENT-SEND-MAU',(data)=>{
+                $("body").attr("bgColor",data)
+            })
+
+            $(document).ready(function(){
+                $('#do').click(()=>{
+                    Socket.emit('CLIENT-SEND-MAU',"red")
+                })
+                $('#xanh').click(()=>{
+                    Socket.emit('CLIENT-SEND-MAU',"blue")
+                })
+                $('#vang').click(()=>{
+                    Socket.emit('CLIENT-SEND-MAU',"yellow")
+                })
+              
+            });
+        </script>
+        <style>
+            #do,#xanh,#vang{
+                width: 300px;height: 70px;
+            }
+            #do{
+                background-color: red;
+            }
+            #xanh{
+                background-color: blue;
+            }
+            #vang{
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body bgcolor="pink">
+<div id="do"></div>
+<div id="xanh"></div>
+<div id="vang"></div>
+    </body>
+</html>

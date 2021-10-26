@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Demo Socket Io</title>
+        <!-- <script src="../public/jquery.js"></script> -->
+        <script src="socket.io/socket.io.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+        
+        <script>
+    
+            var Socket = io("http://localhost:3000/");
+
+            Socket.on("Server-send-data",(data)=>{
+        $('#noidung').append(data + '<br> ');
+    });
+            $(document).ready(function(){
+                $('#mrA').click(function(){
+                   Socket.emit('Client-send-data','HELLO TAT CA CAC BAN')
+                });
+            });
+        </script>
+    </head>
+    <body>
+      <div id="mrA">Click send</div>
+      <h2 id="noidung"></h2>
+    </body>
+</html>
