@@ -20,9 +20,22 @@ io.on('connection',(socket)=>{
         // console.log( socket.adapter.rooms ); //show danh sach room dang co
         var arr = [];
 
-        for (const room of socket.adapter.rooms) {
-            arr.push(room[0]);
+        for (let r of (socket.adapter.rooms)) {
+            arr.push(r[0])
         }
+        io.sockets.emit("server-send-rooms",arr);
+        socket.emit("server-send-room-socket",data)
+
+
+        // var arr = [];
+
+        // for (const room of socket.adapter.rooms) {
+        //    arr.push(room[0]);
+        // }
+        // io.sockets.emit("server-send-rooms",arr)
+    });
+    socket.on("user-send-message",(data)=>{
+        io.sockets.in(socket.Phong).emit("server-chat",data)
     });
     });
 
