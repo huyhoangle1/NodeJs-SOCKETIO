@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo chat</title>
+    <script src="jquery.js"></script>
+    <script src="/socket.io/socket.io.js"> </script>
+    <script src="xuly.js"></script>
+
+    <link rel="stylesheet" href="layout.css">
+    <style>
+   @-webkit-keyframes example {
+  0% {color: Crimson;}
+  25% {color: LightSalmon;}
+  50% {color: pink;}
+  100% {color: purple;}
+}
+
+/* Cú pháp tiêu chuẩn */
+@keyframes example {
+  0% {color: Crimson;}
+  25% {color: LightSalmon;}
+  50% {color: pink;}
+  100% {color: indigo;}
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="Sayhi">
+            Hello <span id="currentUser"></span>
+            <input type="button" onclick="tailaitrang()" id="btnLayout" value="Logout">
+        </div>
+        <h3 style="text-align: center;font-size: 35px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: brown;
+text-shadow: 5px 5px yellow;
+-webkit-animation-name: example;
+  -webkit-animation-duration: 4s; 
+  animation-name: example;
+  animation-duration: 4s;
+        
+        
+        ">Demo Tin Nhắn Siêu Cấp Víp Pro</h3>
+       <input type="text" id="txtUsername" placeholder="Tên tài khoản ....">
+       <input type="button" value="Register" id="btnRegister">
+       <div class="block"></div>
+       <div id="left">
+           <div id="boxTitle">Users Online</div>
+           <div id="boxContent">
+
+           </div>
+       </div>
+       <div id="right">
+
+           <div id="listMessages">
+
+           </div>    
+           <div id="thongbao"></div>
+           <input type="text" id="txtMessages">
+           <input type="button" value="Send" id="btnSend">  
+         </div>
+</div>
+</body>
+</html>

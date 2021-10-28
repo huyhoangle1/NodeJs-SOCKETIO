@@ -1,0 +1,60 @@
+body
+{
+    background-color: #ebebebf4;
+}
+wrapper{
+    width: 600px;
+    margin: auto;
+}
+
+#left, #right{
+    float: left;
+    margin-top: 20px;
+    min-height: 500px;
+}
+#left{
+    width: 30%;
+    float: left;
+    background-color: yellow;
+}
+#right{
+    width: 70%;
+    float: right;
+    background-color: #9dffef;
+}
+.block{
+    width: 100%;
+    clear: both;
+}
+#boxTitle{
+    border: solid 1px black;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #Ff9dea;
+    padding: 5px;
+}
+
+#Sayhi{
+    text-align: right;
+}
+/* #listMessages{
+height: 200px;
+background-color: #Ff9dea;
+margin-bottom: 15px;
+} */
+#txtMessages{
+    background-color: transparent;
+    border: 1px solid black;
+    width: 70%;
+    margin: 5px;
+}
+#btnSend{
+width: 27%;margin: 2px;
+}
+.ms{
+    color: #Ff9dea;
+}
+.tttt{
+    display: flex;
+}

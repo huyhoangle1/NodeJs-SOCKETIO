@@ -22,6 +22,7 @@ io.on('connection',(socket)=>{
 
         for (let r of (socket.adapter.rooms)) {
             arr.push(r[0])
+            
         }
         io.sockets.emit("server-send-rooms",arr);
         socket.emit("server-send-room-socket",data)
